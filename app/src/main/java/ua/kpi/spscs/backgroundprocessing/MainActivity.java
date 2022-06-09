@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     progress.post(new Runnable() {
                         @Override
                         public void run() {
-                            text.setText("Updating");
+                            text.setText("Updating: " + String.valueOf(value));
                             progress.setProgress(value);
                         }
                     });
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Simulating something timeconsuming
     private void doFakeWork() {
-        SystemClock.sleep(5000);
+        SystemClock.sleep(3000);
     }
 
 }
